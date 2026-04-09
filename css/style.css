@@ -1,133 +1,206 @@
-/* RESET E BASI */
+/* RESET E VARIABILI */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Georgia', serif; /* Font tipico da giornale */
-  line-height: 1.6;
+  font-family: 'Georgia', serif;
+  line-height: 1.5;
   color: #1a1a1a;
-  background-color: #fff;
+  background: #fff;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
-/* UTILITY CLASSES */
-.flex-between { display: flex; justify-content: space-between; align-items: center; }
-.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* HEADER */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER & DATA */
 .top-bar {
-  background-color: #000;
-  color: #fff;
-  font-size: 0.8rem;
-  padding: 8px 0;
+  background: #f5faff;
+  color: #333;
+  padding: 10px 0;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
-.user-nav a {
-  color: #fff;
+#current-date {
+  word-spacing: 15px;
+  letter-spacing: 1px;
+}
+
+.user-actions a {
+  color: #333;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 15px;
   font-weight: bold;
 }
 
-.logo-area {
-  padding: 40px 0;
+.logo-section {
+  padding: 30px 0;
   text-align: center;
-  border-bottom: 1px solid #eee;
 }
 
-.main-nav {
-  border-bottom: 3px solid #000;
-  background: #fff;
-  position: sticky; /* Il menu resta in alto se scorri */
+.main-logo {
+  max-width: 320px;
+  height: auto;
+}
+
+/* MENU */
+.main-navigation {
+  border-top: 3px solid #ff0000;
+  border-bottom: none;
+  position: sticky;
   top: 0;
+  background: #fff;
+  z-index: 1000;
 }
 
-.main-nav ul {
+.nav-list {
   list-style: none;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
-.main-nav li a {
+.nav-list li a {
   text-decoration: none;
   color: #000;
   font-weight: 900;
   text-transform: uppercase;
   padding: 0 15px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
-/* GRID PRINCIPALE (Il cuore del compito) */
-.news-grid {
+/* GRIGLIA PRINCIPALE (CSS GRID) */
+.news-layout {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Due colonne: 2/3 per la notizia, 1/3 sidebar */
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
   margin-top: 30px;
 }
 
+/* ARTICOLO PRINCIPALE */
+.hero-article {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.hero-article h1 {
+  font-size: 2.8rem;
+  margin: 15px 0;
+  line-height: 1.1;
+}
+
 .category {
-  color: #d10000; /* Rosso tipico del manifesto */
+  color: #c00;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.8rem;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
-.featured-article h1 {
-  font-size: 2.5rem;
-  margin: 10px 0;
-  line-height: 1.1;
+.summary {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
 }
 
-.featured-article img {
+.image-wrapper img {
   width: 100%;
   height: auto;
+  display: block;
+}
+
+/* GRIGLIA SECONDARIA */
+.secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
 }
 
 /* SIDEBAR */
-.section-title {
-  border-top: 2px solid #000;
+.sidebar-title {
+  border-top: 3px solid #000;
   padding-top: 10px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
-.sidebar-item {
-  padding-bottom: 15px;
+.sidebar-box {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.small-news {
   margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.sidebar-item img {
+.btn-full {
   width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
 }
 
 /* FOOTER */
-footer {
-  background-color: #f4f4f4;
+.site-footer {
+  background: #1a1a1a;
+  color: #ccc;
   padding: 40px 0;
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid #ddd;
+  font-size: 0.8rem;
 }
 
-/* RESPONSIVENESS (Media Query) */
+/* RESPONSIVENESS */
 @media (max-width: 900px) {
-  .news-grid {
-    grid-template-columns: 1fr; /* Su tablet/mobile le colonne diventano una sola */
+  .news-layout {
+    grid-template-columns: 1fr;
   }
 
-  .main-nav ul {
-    flex-wrap: wrap; /* Il menu va a capo se non c'è spazio */
+  .secondary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-article h1 {
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
   }
 }

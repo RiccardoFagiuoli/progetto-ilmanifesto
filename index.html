@@ -3,85 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esercitazione - Il Manifesto Layout</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Esercitazione Multimedia Design - Layout News</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- HEADER: Testata del giornale -->
-<header>
+<!-- BARRA SUPERIORE -->
+<header class="site-header">
   <div class="top-bar">
     <div class="container flex-between">
-      <div class="date">Giovedì, 9 Aprile 2026</div>
-      <nav class="user-nav">
+      <div class="date-container">
+        <span id="current-date"></span>
+      </div>
+      <nav class="user-actions">
         <a href="#">Abbonati</a>
         <a href="#">Accedi</a>
+        <a href="#" class="search-icon">🔍</a>
       </nav>
     </div>
   </div>
 
-  <div class="logo-area">
+  <!-- LOGO CENTRALE -->
+  <div class="logo-section">
     <div class="container">
-      <!-- Placeholder del logo -->
-      <img src="https://placehold.co" alt="Logo il manifesto">
+      <img src="https://dummyimage.com/500x100/ffffff/8a8a8a.png&text=ilmanifesto" alt="Logo il manifesto" class="main-logo">
     </div>
   </div>
 
-  <nav class="main-nav">
-    <ul class="container flex-center">
-      <li><a href="#">Politica</a></li>
-      <li><a href="#">Internazionale</a></li>
-      <li><a href="#">Economia</a></li>
-      <li><a href="#">Cultura</a></li>
-      <li><a href="#">Visioni</a></li>
-      <li><a href="#">Commenti</a></li>
-    </ul>
+  <!-- NAVIGAZIONE PRINCIPALE -->
+  <nav class="main-navigation">
+    <div class="container">
+      <ul class="nav-list flex-center">
+        <li><a href="#">Politica</a></li>
+        <li><a href="#">Internazionale</a></li>
+        <li><a href="#">Economia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Visioni</a></li>
+        <li><a href="#">Commenti</a></li>
+        <li><a href="#">Extraterrestre</a></li>
+      </ul>
+    </div>
   </nav>
 </header>
 
-<!-- CONTENUTO PRINCIPALE: Griglia delle notizie -->
 <main class="container">
-  <section class="news-grid">
+  <!-- GRIGLIA NEWS (Layout Giornalistico) -->
+  <div class="news-layout">
 
-    <!-- Notizia Principale (Column 1 & 2 su desktop) -->
-    <article class="featured-article">
-      <img src="https://placehold.co" alt="Immagine dell'articolo principale">
-      <div class="content">
-        <span class="category">Politica</span>
-        <h1>Il titolo dell'articolo principale che occupa più spazio</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisl eget lorem vulputate varius. Maecenas scelerisque sem non egestas... <a href="#">[Continua]</a></p>
+    <!-- COLONNA PRINCIPALE (SINISTRA) -->
+    <section class="main-stories">
+      <article class="hero-article">
+        <div class="image-wrapper">
+          <img src="https://dummyimage.com/600x400/c4c4c4/000000.png&text=COPERTINA" alt="Copertina notizia principale">
+        </div>
+        <div class="article-body">
+          <span class="category">Primo Piano</span>
+          <h1>Titolo dell'Articolo Principale in Grassetto</h1>
+          <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
+          <span class="author">Di Nome Cognome</span>
+        </div>
+      </article>
+
+      <div class="secondary-grid">
+        <article class="card">
+          <img src="https://dummyimage.com/600x400/dec7de/000000.png&text=+NEWS+" alt="News">
+          <span class="category">Internazionale</span>
+          <h3>Un titolo di media importanza per la seconda colonna</h3>
+        </article>
+        <article class="card">
+          <img src="https://placehold.co" alt="News">
+          <span class="category">Economia</span>
+          <h3>Analisi economica della giornata con testo placeholder</h3>
+        </article>
       </div>
-    </article>
+    </section>
 
-    <!-- Sidebar laterale (Column 3 su desktop) -->
+    <!-- SIDEBAR (DESTRA) -->
     <aside class="sidebar">
-      <h2 class="section-title">In Edicola</h2>
-
-      <div class="sidebar-item">
-        <img src="https://placehold.co" alt="Copertina del giorno">
+      <div class="sidebar-box edicola">
+        <h2 class="sidebar-title">L'Edicola</h2>
+        <img src="https://dummyimage.com/600x400/c7dec7/000000.png&text=PrimaPagina" alt="Prima pagina PDF">
+        <button class="btn-full">Sfoglia il quotidiano</button>
       </div>
 
-      <div class="sidebar-item">
-        <span class="category">Ultima ora</span>
-        <h3>Notizia flash numero uno dal mondo</h3>
-      </div>
-
-      <div class="sidebar-item">
-        <span class="category">Economia</span>
-        <h3>Andamento dei mercati e placeholder testo</h3>
+      <div class="sidebar-box rubriche">
+        <h2 class="sidebar-title">Rubriche</h2>
+        <div class="small-news">
+          <span class="category">Alias</span>
+          <h4>Titolo della rubrica culturale</h4>
+        </div>
+        <div class="small-news">
+          <span class="category">Letture</span>
+          <h4>Recensione del libro placeholder</h4>
+        </div>
       </div>
     </aside>
 
-  </section>
+  </div>
 </main>
 
-<!-- FOOTER: Piè di pagina -->
-<footer>
+<footer class="site-footer">
   <div class="container">
-    <p>&copy; 2026 Riproduzione layout a scopo didattico - Multimedia Design</p>
-    <p>Utilizzo esclusivo di placeholder come richiesto.</p>
+    <p>&copy; 2026 Esercitazione Universitaria - Multimedia Design e Production</p>
+    <p>Layout ispirato a ilmanifesto.it - Solo a scopo didattico.</p>
   </div>
 </footer>
 
+<!-- SCRIPT DATA DINAMICA -->
+<script>
+  const options = {day: 'numeric', month: 'long', year: 'numeric'};
+  const data = new Date().toLocaleDateString('it-IT', options);
+  document.getElementById('current-date').innerText = data;
+</script>
 </body>
 </html>
