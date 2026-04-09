@@ -3,118 +3,388 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esercitazione Multimedia Design - Layout News</title>
+  <title>Progetto Universitario - il manifesto (Lorem Ipsum)</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<!-- BARRA SUPERIORE -->
-<header class="site-header">
+<!-- OVERLAY PER SIDEBAR -->
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR MENU (laterale sinistra) -->
+<div class="sidebar-menu" id="sidebarMenu">
+  <div class="sidebar-header">
+    <span class="sidebar-logo">il manifesto</span>
+    <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+  </div>
+  <ul class="sidebar-nav">
+    <li><a href="#">Primo piano</a></li>
+    <li><a href="#">Politica</a></li>
+    <li><a href="#">Internazionale</a></li>
+    <li><a href="#">Cultura</a></li>
+    <li><a href="#">Economia</a></li>
+    <li><a href="#">Ambiente</a></li>
+    <li><a href="#">Podcast</a></li>
+    <li><hr></li>
+    <li><a href="#">Edicola</a></li>
+    <li><a href="#">Newsletter</a></li>
+    <li><a href="#">Cerca</a></li>
+    <li><a href="#">Store</a></li>
+    <li><a href="#">Contatti</a></li>
+    <li><a href="#">Aiuto</a></li>
+  </ul>
+</div>
+
+<!-- ============================================ -->
+<!-- STICKY HEADER-->
+<!-- ============================================ -->
+<div class="sticky-header">
+
+  <!-- TOP BAR -->
   <div class="top-bar">
-    <div class="container flex-between">
-      <div class="date-container">
-        <span id="current-date"></span>
+    <div class="container">
+      <div class="top-left">
+        <div class="date-group">
+          <span class="date" id="currentDate">Caricamento...</span>
+          <span class="separator-dash">—</span>
+          <span class="update" id="currentUpdate">Aggiornato alle --:--</span>
+        </div>
+        <a href="#" class="top-link">Abbonamenti</a>
+        <a href="#" class="top-link">Ultime edizioni</a>
       </div>
-      <nav class="user-actions">
-        <a href="#">Abbonati</a>
-        <a href="#">Accedi</a>
-        <a href="#" class="search-icon">🔍</a>
-      </nav>
+      <div class="top-right">
+        <a href="#">Store</a>
+        <a href="#">Contatti</a>
+        <a href="#">English</a>
+        <a href="#">Aiuto</a>
+        <a href="#">Tariffe</a>
+        <a href="#">Gerenza</a>
+      </div>
     </div>
   </div>
 
-  <!-- LOGO CENTRALE -->
-  <div class="logo-section">
+  <!-- HEADER PRINCIPALE -->
+  <div class="main-header">
     <div class="container">
-      <img src="img/logo.png" alt="Logo il manifesto" class="main-logo">
+      <div class="header-content">
+        <div class="header-left">
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="fas fa-bars"></i>
+            <span class="hamburger-text">Esplora</span>
+          </button>
+        </div>
+        <div class="header-center">
+          <img src="https://placehold.co/220x55/cccccc/666666?text=LOGO" alt="Logo placeholder" class="logo-img">
+        </div>
+        <div class="header-right">
+          <button class="btn-abbonati-top">ABBONATI</button>
+          <button class="btn-entra-top">ENTRA</button>
+        </div>
+      </div>
     </div>
   </div>
+  <!-- RIGA ROSSA -->
+  <div class="red-line"></div>
 
-  <!-- NAVIGAZIONE PRINCIPALE -->
-  <nav class="main-navigation">
+  <!-- MENU NAVIGAZIONE ORIZZONTALE -->
+  <div class="main-nav">
     <div class="container">
-      <ul class="nav-list flex-center">
+      <ul class="nav-links">
+        <li><a href="#">Edizione di oggi</a></li>
+        <li><a href="#">Abbonati</a></li>
         <li><a href="#">Politica</a></li>
         <li><a href="#">Internazionale</a></li>
-        <li><a href="#">Economia</a></li>
         <li><a href="#">Cultura</a></li>
         <li><a href="#">Visioni</a></li>
-        <li><a href="#">Commenti</a></li>
-        <li><a href="#">Extraterrestre</a></li>
+        <li><a href="#">MdM</a></li>
+        <li><a href="#">Podcast</a></li>
+        <li><a href="#">Newsletter</a></li>
       </ul>
     </div>
-  </nav>
-</header>
-
-<main class="container">
-  <!-- GRIGLIA NEWS (Layout Giornalistico) -->
-  <div class="news-layout">
-
-    <!-- COLONNA PRINCIPALE (SINISTRA) -->
-    <section class="main-stories">
-      <article class="hero-article">
-        <div class="image-wrapper">
-          <img src="https://dummyimage.com/600x400/c4c4c4/000000.png&text=COPERTINA" alt="Copertina notizia principale">
-        </div>
-        <div class="article-body">
-          <span class="category">Primo Piano</span>
-          <h1>Titolo dell'Articolo Principale in Grassetto</h1>
-          <p class="summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...</p>
-          <span class="author">Di Nome Cognome</span>
-        </div>
-      </article>
-
-      <div class="secondary-grid">
-        <article class="card">
-          <img src="https://dummyimage.com/600x400/dec7de/000000.png&text=+NEWS+" alt="News">
-          <span class="category">Internazionale</span>
-          <h3>Un titolo di media importanza per la seconda colonna</h3>
-        </article>
-        <article class="card">
-          <img src="https://placehold.co" alt="News">
-          <span class="category">Economia</span>
-          <h3>Analisi economica della giornata con testo placeholder</h3>
-        </article>
-      </div>
-    </section>
-
-    <!-- SIDEBAR (DESTRA) -->
-    <aside class="sidebar">
-      <div class="sidebar-box edicola">
-        <h2 class="sidebar-title">L'Edicola</h2>
-        <img src="https://dummyimage.com/600x400/c7dec7/000000.png&text=PrimaPagina" alt="Prima pagina PDF">
-        <button class="btn-full">Sfoglia il quotidiano</button>
-      </div>
-
-      <div class="sidebar-box rubriche">
-        <h2 class="sidebar-title">Rubriche</h2>
-        <div class="small-news">
-          <span class="category">Alias</span>
-          <h4>Titolo della rubrica culturale</h4>
-        </div>
-        <div class="small-news">
-          <span class="category">Letture</span>
-          <h4>Recensione del libro placeholder</h4>
-        </div>
-      </div>
-    </aside>
-
   </div>
+
+  <div class="grey-line"></div>
+</div><!-- fine sticky-header -->
+
+<!-- ============================================ -->
+<!-- CONTENUTO PRINCIPALE-->
+<!-- ============================================ -->
+<main class="container main-content">
+
+  <!-- HERO SECTION -->
+  <div class="hero-section">
+    <div class="hero-category">INTERNAZIONALE</div>
+    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+    <div class="hero-meta">Sed do eiusmod tempor / INCIDIDUNT</div>
+    <img src="https://placehold.co/1200x400/cccccc/666666?text=IMMAGINE+DI+COPERTINA" alt="Hero image placeholder" class="hero-image">
+    <div class="hero-excerpt">
+      <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </div>
+  </div>
+
+  <!-- ARTICOLI ROW (2 colonne) -->
+  <div class="articles-row">
+    <div class="main-column">
+      <div class="article-card">
+        <div class="article-category">POLITICA</div>
+        <h2>Sed ut perspiciatis unde omnis iste natus error</h2>
+        <div class="article-meta">Quis autem vel eum / DOLOREM</div>
+        <img src="https://placehold.co/600x200/cccccc/666666?text=ARTICOLO+IMMAGINE" alt="Article image placeholder" class="article-image">
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+      </div>
+    </div>
+    <div class="sidebar-column">
+      <div class="sidebar-item">
+        <div class="sidebar-category">EUROPA</div>
+        <h3>At vero eos et accusamus et iusto odio dignissimos</h3>
+        <div class="sidebar-meta">Ducimus qui blanditiis / PRAESENTIUM</div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-category">INTERNAZIONALE</div>
+        <h3>Excepteur sint occaecat cupidatat non proident</h3>
+        <div class="sidebar-meta">Sunt in culpa / OFFICIA</div>
+      </div>
+      <div class="sidebar-item">
+        <div class="sidebar-category">ECONOMIA</div>
+        <h3>Nam libero tempore, cum soluta nobis est eligendi</h3>
+        <div class="sidebar-meta">Optio cumque / NIHIL IMPEDIT</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD GRID (altri articoli) -->
+  <div class="more-articles">
+    <div class="section-title">Altri articoli</div>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+ASIA" alt="Card image" class="card-image">
+        <div class="card-category">INTERNAZIONALE</div>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+        <p>Sed do eiusmod tempor incididunt ut labore</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+EUROPA" alt="Card image" class="card-image">
+        <div class="card-category">EUROPA</div>
+        <h3>Ut enim ad minim veniam, quis nostrud exercitation</h3>
+        <p>Ullamco laboris nisi ut aliquip ex ea commodo</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+CONTE" alt="Card image" class="card-image">
+        <div class="card-category">POLITICA</div>
+        <h3>Duis aute irure dolor in reprehenderit in voluptate</h3>
+        <p>Velit esse cillum dolore eu fugiat nulla pariatur</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+PD" alt="Card image" class="card-image">
+        <div class="card-category">POLITICA</div>
+        <h3>Excepteur sint occaecat cupidatat non proident</h3>
+        <p>Sunt in culpa qui officia deserunt mollit anim</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABBONAMENTI -->
+  <div class="subscription-box">
+    <h3>Tutto digitale</h3>
+    <p>Leggi senza limiti su sito e app</p>
+    <p class="price">€ 3,99 a settimana</p>
+    <button class="btn">Abbonati</button>
+    <p class="small">Rinnovo automatico. Disdici con un clic.</p>
+  </div>
+
+  <!-- ULTERIORI TESTI-->
+  <div class="lorem-section">
+    <h2>Where does it come from?</h2>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+    <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+  </div>
+
 </main>
 
-<footer class="site-footer">
+<div class="pre-footer">
   <div class="container">
-    <p>&copy; 2026 Esercitazione Universitaria - Multimedia Design e Production</p>
-    <p>Layout ispirato a ilmanifesto.it - Solo a scopo didattico.</p>
+    <div class="pre-footer-text">il manifesto</div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-two-columns">
+
+      <!-- COLONNA SINISTRA -->
+      <div class="footer-left">
+        <div class="rectangle">  <!-- ← NUOVO DIV PER IL RETTANGOLO -->
+          <div class="footer-brand">
+            <div class="footer-tagline">IL MIO MANIFESTO</div>
+            <div class="footer-buttons">
+              <button class="btn-footer">Abbonati</button>
+              <button class="btn-footer-outline">Accedi</button>
+            </div>
+          </div>
+
+          <div class="footer-info">
+            <h4>INFO</h4>
+            <ul>
+              <li><a href="#">Aiuto Newsletter</a></li>
+              <li><a href="#">Tariffe</a></li>
+              <li><a href="#">Abbonamenti</a></li>
+              <li><a href="#">Regala un abbonamento</a></li>
+              <li><a href="#">La membership</a></li>
+              <li><a href="#">Cosa puoi fare</a></li>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Termini e condizioni</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Cookie</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLONNA DESTRA (3 colonne) -->
+      <div class="footer-right">
+
+        <!-- Colonna 1: NOTIZIE + INSERTI -->
+        <div class="footer-col">
+          <div class="notizie-group">
+            <h4>NOTIZIE</h4>
+            <ul>
+              <li><a href="#">Editoriale</a></li>
+              <li><a href="#">Commenti</a></li>
+              <li><a href="#">Politica</a></li>
+              <li><a href="#">Internazionale</a></li>
+              <li><a href="#">Europa</a></li>
+              <li><a href="#">Italia</a></li>
+              <li><a href="#">Lavoro</a></li>
+              <li><a href="#">Economia</a></li>
+              <li><a href="#">Scuola</a></li>
+              <li><a href="#">Cultura</a></li>
+              <li><a href="#">Visioni</a></li>
+              <li><a href="#">Sport</a></li>
+              <li><a href="#">Rubriche</a></li>
+              <li><a href="#">Appelli</a></li>
+            </ul>
+          </div>
+          <div class="inserti-group">
+            <h4>INSERTI</h4>
+            <ul>
+              <li><a href="#">Alias</a></li>
+              <li><a href="#">Alias Domenica</a></li>
+              <li><a href="#">ExtraTerrestre</a></li>
+              <li><a href="#">Le Monde Diplomatique</a></li>
+              <li><a href="#">La fine del mondo</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Colonna 2: IL MANIFESTO + IL QUOTIDIANO + SOCIAL-->
+        <div class="footer-col">
+          <div class="manifesto-group">
+            <h4>IL MANIFESTO</h4>
+            <ul>
+              <li><a href="#">Gerenza</a></li>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Abbonamenti</a></li>
+              <li><a href="#">Contatti</a></li>
+              <li><a href="#">Aiuto</a></li>
+              <li><a href="#">English edition</a></li>
+            </ul>
+          </div>
+          <div class="quotidiano-group">
+            <h4>IL QUOTIDIANO</h4>
+            <ul>
+              <li><a href="#">Edizioni Pdf</a></li>
+              <li><a href="#">Archivio</a></li>
+            </ul>
+          </div>
+
+          <div class="social-group">
+            <h4>SOCIAL</h4>
+            <ul class="social-list">
+              <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+              <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+              <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+              <li><a href="#"><i class="fab fa-vimeo"></i> Vimeo</a></li>
+              <li><a href="#"><i class="fab fa-spreaker"></i> Spreaker</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Colonna 3: IL COLLETTIVO -->
+        <div class="footer-col">
+          <h4>IL COLLETTIVO</h4>
+          <ul>
+            <li><a href="#">MdM il manifesto del manifesto</a></li>
+            <li><a href="#">- cooperativa</a></li>
+            <li><a href="#">- giornale</a></li>
+            <li><a href="#">- piattaforma</a></li>
+            <li><a href="#">- impresa</a></li>
+            <li><a href="#">- comunità</a></li>
+            <li><a href="#">- storia</a></li>
+            <li><a href="#">Buon compleanno manifesto!</a></li>
+            <li><a href="#">MeMa</a></li>
+            <li><a href="#">il manifesto Lab</a></li>
+            <li><a href="#">I podcast del manifesto</a></li>
+            <li><a href="#">Le novità digitali</a></li>
+            <li><a href="#">Le app del manifesto</a></li>
+            <li><a href="#">#ilmanifesto50</a></li>
+            <li><a href="#">Diritti foto e articoli</a></li>
+            <li><a href="#">Correzioni</a></li>
+            <li><a href="#">la manifestival</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright-wrapper">
+      <div class="copyright-left">
+        <p>© 2026 Progetto universitario - Replica interfaccia "il manifesto" | Immagini da placehold.co | Testi da Lorem Ipsum</p>
+      </div>
+      <div class="copyright-right">
+        <a href="#">Termini e condizioni</a>
+        <a href="#">Cookie</a>
+        <a href="#">Accessibilità</a>
+        <a href="#">TDM</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
   </div>
 </footer>
 
-<!-- SCRIPT DATA DINAMICA -->
 <script>
-  const options = {day: 'numeric', month: 'long', year: 'numeric'};
-  const data = new Date().toLocaleDateString('it-IT', options);
-  document.getElementById('current-date').innerText = data;
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const sidebar = document.getElementById('sidebarMenu');
+  const overlay = document.getElementById('overlay');
+  const closeSidebar = document.getElementById('closeSidebar');
+
+  function updateDateTime() {
+    const data = new Date().toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+    document.getElementById('currentDate').innerText = data;
+    const ora = new Date().toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('currentUpdate').innerText = 'Aggiornato alle ' + ora;
+  }
+
+  updateDateTime();
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSidebarFunc() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  hamburgerBtn.addEventListener('click', openSidebar);
+  closeSidebar.addEventListener('click', closeSidebarFunc);
+  overlay.addEventListener('click', closeSidebarFunc);
 </script>
+
 </body>
 </html>
