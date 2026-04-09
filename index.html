@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esercitazione - Il Manifesto Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER: Testata del giornale -->
+<header>
+  <div class="top-bar">
+    <div class="container flex-between">
+      <div class="date">Giovedì, 9 Aprile 2026</div>
+      <nav class="user-nav">
+        <a href="#">Abbonati</a>
+        <a href="#">Accedi</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="logo-area">
+    <div class="container">
+      <!-- Placeholder del logo -->
+      <img src="https://placehold.co" alt="Logo il manifesto">
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <ul class="container flex-center">
+      <li><a href="#">Politica</a></li>
+      <li><a href="#">Internazionale</a></li>
+      <li><a href="#">Economia</a></li>
+      <li><a href="#">Cultura</a></li>
+      <li><a href="#">Visioni</a></li>
+      <li><a href="#">Commenti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- CONTENUTO PRINCIPALE: Griglia delle notizie -->
+<main class="container">
+  <section class="news-grid">
+
+    <!-- Notizia Principale (Column 1 & 2 su desktop) -->
+    <article class="featured-article">
+      <img src="https://placehold.co" alt="Immagine dell'articolo principale">
+      <div class="content">
+        <span class="category">Politica</span>
+        <h1>Il titolo dell'articolo principale che occupa più spazio</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel nisl eget lorem vulputate varius. Maecenas scelerisque sem non egestas... <a href="#">[Continua]</a></p>
+      </div>
+    </article>
+
+    <!-- Sidebar laterale (Column 3 su desktop) -->
+    <aside class="sidebar">
+      <h2 class="section-title">In Edicola</h2>
+
+      <div class="sidebar-item">
+        <img src="https://placehold.co" alt="Copertina del giorno">
+      </div>
+
+      <div class="sidebar-item">
+        <span class="category">Ultima ora</span>
+        <h3>Notizia flash numero uno dal mondo</h3>
+      </div>
+
+      <div class="sidebar-item">
+        <span class="category">Economia</span>
+        <h3>Andamento dei mercati e placeholder testo</h3>
+      </div>
+    </aside>
+
+  </section>
+</main>
+
+<!-- FOOTER: Piè di pagina -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Riproduzione layout a scopo didattico - Multimedia Design</p>
+    <p>Utilizzo esclusivo di placeholder come richiesto.</p>
+  </div>
+</footer>
+
+</body>
+</html>
