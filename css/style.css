@@ -527,7 +527,12 @@ body {
   text-align: center;
   padding: 60px;
   border-radius: 1px;
-  margin: 30px 0;
+  width: 93vw;
+  position: relative;
+  left: 54%;
+  right: 54%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .subscription-box h3 {
