@@ -11,9 +11,10 @@ body {
 }
 
 .container {
-  max-width: 1250px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+
 }
 
 /* ============================================ */
@@ -527,9 +528,9 @@ body {
   text-align: center;
   padding: 60px;
   border-radius: 1px;
-  width: 93vw;
+  width: 94vw;
   position: relative;
-  left: 54%;
+  left: 53%;
   right: 54%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -613,19 +614,12 @@ body {
   border-top: 1px solid #e0e0e0;
 }
 
-.pre-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-}
-
 .pre-footer-text {
   color:  rgb(85 85 85 / 0.8);
   font-family: Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   letter-spacing: 0.5px;
+  margin-left: 12px;
 }
 
 /* ============================================ */
@@ -664,8 +658,7 @@ footer {
   display: inline-block;
   align-self: flex-start;
   width: 90%;
-  margin: 0 auto;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .footer-brand {
