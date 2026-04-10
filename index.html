@@ -75,11 +75,11 @@
           </button>
         </div>
         <div class="header-center">
-          <img src="https://placehold.co/220x55/cccccc/666666?text=LOGO" alt="Logo placeholder" class="logo-img">
+          <img src="https://placehold.co/200x60/cccccc/666666?text=LOGO" alt="Logo placeholder" class="logo-img">
         </div>
         <div class="header-right">
-          <button class="btn-abbonati-top">ABBONATI</button>
-          <button class="btn-entra-top">ENTRA</button>
+          <button class="btn-abbonati-top">Abbonati</button>
+          <button class="btn-entra-top">Entra</button>
         </div>
       </div>
     </div>
@@ -184,20 +184,19 @@
     </div>
   </div>
 
-  <!-- ABBONAMENTI -->
-  <div class="subscription-box">
-    <h3>Tutto digitale</h3>
-    <p>Leggi senza limiti su sito e app</p>
-    <p class="price">€ 3,99 a settimana</p>
-    <button class="btn">Abbonati</button>
-    <p class="small">Rinnovo automatico. Disdici con un clic.</p>
-  </div>
-
   <!-- ULTERIORI TESTI-->
   <div class="lorem-section">
     <h2>Where does it come from?</h2>
     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
     <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+  </div>
+
+  <!-- ABBONAMENTI -->
+  <div class="subscription-box">
+    <h3>Partecipa.</h3>
+    <p class="text">Vogliamo continuare a fare un manifesto libero, per tutte e tutti.</p>
+    <button class="btn-subscription-box-special">Abbonamento speciale a 4 euro</button>
+    <a class="btn-subscription-box-abbonamenti" href="#">Tutti gli abbonamenti →</a>
   </div>
 
 </main>
@@ -214,12 +213,12 @@
 
       <!-- COLONNA SINISTRA -->
       <div class="footer-left">
-        <div class="rectangle">  <!-- ← NUOVO DIV PER IL RETTANGOLO -->
+        <div class="rectangle">
           <div class="footer-brand">
             <div class="footer-tagline">IL MIO MANIFESTO</div>
             <div class="footer-buttons">
-              <button class="btn-footer">Abbonati</button>
-              <button class="btn-footer-outline">Accedi</button>
+              <button class="btn-footer-abbonati">Abbonati</button>
+              <button class="btn-footer-accedi">Accedi</button>
             </div>
           </div>
 
@@ -301,13 +300,13 @@
           <div class="social-group">
             <h4>SOCIAL</h4>
             <ul class="social-list">
-              <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-              <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-              <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-              <li><a href="#"><i class="fab fa-vimeo"></i> Vimeo</a></li>
-              <li><a href="#"><i class="fab fa-spreaker"></i> Spreaker</a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-              <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">Vimeo</a></li>
+              <li><a href="#">Spreaker</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Pinterest</a></li>
             </ul>
           </div>
         </div>
@@ -338,21 +337,23 @@
 
       </div>
     </div>
-
-    <div class="copyright-wrapper">
-      <div class="copyright-left">
-        <p>© 2026 Progetto universitario - Replica interfaccia "il manifesto" | Immagini da placehold.co | Testi da Lorem Ipsum</p>
-      </div>
-      <div class="copyright-right">
-        <a href="#">Termini e condizioni</a>
-        <a href="#">Cookie</a>
-        <a href="#">Accessibilità</a>
-        <a href="#">TDM</a>
-        <a href="#">Privacy</a>
-      </div>
-    </div>
   </div>
 </footer>
+
+<div class="copyright-wrapper">
+  <div class="copyright-left">
+    <p>© 2026 UniFI - progetto ilmanifesto | placehold.co & Ipsum</p>
+  </div>
+  <div class="copyright-right">
+    <a href="#">Termini e condizioni</a>
+    <a href="#">Cookie</a>
+    <a href="#">Accessibilità</a>
+    <a href="#">TDM</a>
+    <a href="#">Privacy</a>
+  </div>
+</div>
+
+<div class="bottom-line">&nbsp;</div>
 
 <script>
   const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -361,8 +362,7 @@
   const closeSidebar = document.getElementById('closeSidebar');
 
   function updateDateTime() {
-    const data = new Date().toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
-    document.getElementById('currentDate').innerText = data;
+    document.getElementById('currentDate').innerText = new Date().toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
     const ora = new Date().toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
     document.getElementById('currentUpdate').innerText = 'Aggiornato alle ' + ora;
   }
