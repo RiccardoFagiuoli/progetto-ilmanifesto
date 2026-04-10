@@ -75,7 +75,7 @@
           </button>
         </div>
         <div class="header-center">
-          <img src="https://placehold.co/200x60/cccccc/666666?text=LOGO" alt="Logo placeholder" class="logo-img">
+          <img src="https://placehold.co/350x60/cccccc/666666?text=LOGO" alt="Logo placeholder" class="logo-img" id="mainLogo">
         </div>
         <div class="header-right">
           <button class="btn-abbonati-top">Abbonati</button>
@@ -360,6 +360,25 @@
   const sidebar = document.getElementById('sidebarMenu');
   const overlay = document.getElementById('overlay');
   const closeSidebar = document.getElementById('closeSidebar');
+  const logo = document.getElementById('mainLogo');
+  const originalHeight = 60;   // altezza originale in pixel
+  const smallHeight = 40;      // altezza ridotta durante lo scroll
+  let isSmall = false;  // tiene traccia dello stato attuale
+  const threshold = 100;  // soglia di scroll
+  const hysteresis = 10;  // zona morta per evitare tremolio (10px)
+
+  function handleScroll() {
+    const scrollY = window.scrollY;
+    if (scrollY > threshold + hysteresis && !isSmall) {
+      logo.style.height = smallHeight + 'px';
+      isSmall = true;
+    } else if (scrollY < threshold - hysteresis && isSmall) {
+      logo.style.height = originalHeight + 'px';
+      isSmall = false;
+    }
+  }
+  // Ascolta l'evento scroll
+  window.addEventListener('scroll', handleScroll);
 
   function updateDateTime() {
     document.getElementById('currentDate').innerText = new Date().toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });

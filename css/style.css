@@ -173,7 +173,8 @@ body {
 /* Logo */
 .logo-img {
   height: 60px;
-  width: 200px;
+  width: 350px;
+  transition: height 0.3s ease;
 }
 
 /* Bottoni outline */
