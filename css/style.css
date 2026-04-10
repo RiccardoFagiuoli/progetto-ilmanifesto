@@ -14,7 +14,6 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
-
 }
 
 /* ============================================ */
@@ -28,7 +27,7 @@ body {
 }
 
 /* ============================================ */
-/* TOP BAR: data/aggiornamento a sinistra - link a destra */
+/* TOP BAR */
 /* ============================================ */
 .top-bar {
   background-color: #f5f5f0;
@@ -43,14 +42,14 @@ body {
   font-size: 0.9rem;
   font-family: Arial, sans-serif;
   text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.60);
+  text-decoration-color: rgba(85, 85, 85, 0.6);
   text-decoration-thickness: 0.8px;
   text-underline-offset: 2px;
 }
 
 .top-link:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.50);
+  text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
@@ -80,10 +79,7 @@ body {
   display: inline-block;
 }
 
-.top-left .date {
-  color: #777;
-}
-
+.top-left .date,
 .top-left .update {
   color: #777;
 }
@@ -92,10 +88,6 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
-  text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.60);
-  text-decoration-thickness: 0.8px;
-  text-underline-offset: 2px;
 }
 
 .top-right a {
@@ -105,13 +97,13 @@ body {
 
 .top-right a:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.50);
+  text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
 
 /* ============================================ */
-/* HEADER: hamburger (sinistra) | logo (centro) | bottoni (destra) */
+/* HEADER */
 /* ============================================ */
 .main-header {
   background-color: #ffffff;
@@ -156,6 +148,7 @@ body {
   align-items: center;
   gap: 8px;
 }
+
 .hamburger-text {
   font-size: 1rem;
   font-weight: normal;
@@ -165,7 +158,7 @@ body {
 
 .hamburger-text:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.50);
+  text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
 }
@@ -173,46 +166,46 @@ body {
 /* Logo */
 .logo-img {
   height: 60px;
-  width: 350px;
+  width: auto;
   transition: height 0.3s ease;
 }
 
-/* Bottoni outline */
+/* Bottoni header - override Bootstrap */
 .btn-abbonati-top {
-  background: #bd0101;
-  border: 1px solid #bd0101;
-  color: #ffffff;
-  padding: 10px 22px;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: all 0.3s;
+  background: #bd0101 !important;
+  border: 1px solid #bd0101 !important;
+  color: #ffffff !important;
+  padding: 10px 22px !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  font-family: Arial, sans-serif !important;
+  cursor: pointer !important;
+  border-radius: 2px !important;
+  transition: all 0.3s !important;
 }
 
 .btn-abbonati-top:hover {
-  background: #762c33;
-  border-color: #762c33;
-  color: white;
+  background: #762c33 !important;
+  border-color: #762c33 !important;
+  color: white !important;
 }
 
 .btn-entra-top {
-  background: transparent;
-  border: 1px solid #bd0101;
-  color: #bd0101;
-  padding: 10px 22px;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: all 0.3s;
+  background: transparent !important;
+  border: 1px solid #bd0101 !important;
+  color: #bd0101 !important;
+  padding: 10px 22px !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  font-family: Arial, sans-serif !important;
+  cursor: pointer !important;
+  border-radius: 2px !important;
+  transition: all 0.3s !important;
 }
 
 .btn-entra-top:hover {
-  background: #bd0101;
-  color: white;
+  background: #bd0101 !important;
+  color: white !important;
 }
 
 /* ============================================ */
@@ -223,7 +216,7 @@ body {
 }
 
 /* ============================================ */
-/* MENU NAVIGAZIONE ORIZZONTALE */
+/* MENU NAVIGAZIONE */
 /* ============================================ */
 .main-nav {
   background: white;
@@ -239,19 +232,19 @@ body {
   font-family: Arial, sans-serif;
   font-weight: 500;
   font-size: 1rem;
+  margin: 0;
 }
 
 .nav-links li a {
   text-decoration: none;
   color: #1a1a1a;
-  /*text-transform: uppercase;*/
   font-weight: 500;
   letter-spacing: 0.3px;
 }
 
 .nav-links li a:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.50);
+  text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
 }
@@ -261,7 +254,7 @@ body {
 }
 
 /* ============================================ */
-/* SIDEBAR MENU (laterale sinistra) */
+/* SIDEBAR */
 /* ============================================ */
 .sidebar-menu {
   position: fixed;
@@ -398,20 +391,8 @@ body {
 }
 
 /* ============================================ */
-/* ARTICOLI ROW */
+/* ARTICOLI ROW (contenitori per row/col Bootstrap) */
 /* ============================================ */
-.articles-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.main-column {
-  border-right: 1px solid #eee;
-  padding-right: 40px;
-}
-
 .article-category {
   color: #b11f2c;
   font-family: Arial, sans-serif;
@@ -420,7 +401,7 @@ body {
   text-transform: uppercase;
 }
 
-.main-column h2 {
+.article-card h2 {
   font-size: 1.5rem;
   margin: 8px 0;
 }
@@ -472,7 +453,7 @@ body {
 }
 
 /* ============================================ */
-/* CARD GRID */
+/* CARD GRID - override Bootstrap card */
 /* ============================================ */
 .section-title {
   font-size: 1.3rem;
@@ -482,19 +463,15 @@ body {
   margin-bottom: 25px;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
+/* Override delle card Bootstrap */
 .card {
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 15px;
+  border: none !important;
+  background: transparent !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  padding-bottom: 15px !important;
 }
 
-.card-image {
+.card-img-top {
   width: 100%;
   height: 160px;
   object-fit: cover;
@@ -511,14 +488,16 @@ body {
   margin-bottom: 5px;
 }
 
-.card h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
+.card .card-title {
+  font-size: 1rem !important;
+  margin-bottom: 8px !important;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  color: #1a1a1a;
 }
 
-.card p {
-  font-size: 0.8rem;
-  color: #666;
+.card .card-text {
+  font-size: 0.8rem !important;
+  color: #666 !important;
 }
 
 /* ============================================ */
@@ -528,13 +507,7 @@ body {
   background: #bd0101;
   text-align: center;
   padding: 60px;
-  border-radius: 1px;
-  width: 94vw;
-  position: relative;
-  left: 53%;
-  right: 54%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  border-radius: 2px;
 }
 
 .subscription-box h3 {
@@ -578,8 +551,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.btn-subscription-box-abbonamenti:hover {
-}
 /* ============================================ */
 /* LOREM IPSUM SECTION */
 /* ============================================ */
@@ -603,7 +574,7 @@ body {
 }
 
 /* ============================================ */
-/* PRE-FOOTER - due righe grigie con scritta nel mezzo */
+/* PRE-FOOTER */
 /* ============================================ */
 .pre-footer {
   background: #ffffff;
@@ -616,7 +587,7 @@ body {
 }
 
 .pre-footer-text {
-  color:  rgb(85 85 85 / 0.8);
+  color: rgba(85, 85, 85, 0.8);
   font-family: Arial, sans-serif;
   font-size: 1.1em;
   letter-spacing: 0.5px;
@@ -656,8 +627,6 @@ footer {
   background-color: #f5f5f0;
   padding: 20px;
   border-radius: 3px;
-  display: inline-block;
-  align-self: flex-start;
   width: 90%;
   margin-left: 10px;
 }
@@ -667,7 +636,7 @@ footer {
 }
 
 .footer-tagline {
-  color:  rgb(85 85 85 / 0.8);
+  color: rgba(85, 85, 85, 0.8);
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 2px;
@@ -681,44 +650,43 @@ footer {
   margin-bottom: 30px;
 }
 
+/* Bottoni footer - override Bootstrap */
 .btn-footer-abbonati {
-  background: #bd0101;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
-  width: 100%;
-  border-radius: 2px;
-  transition: background 0.3s ease;
+  background: #bd0101 !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  font-weight: bold !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+  border-radius: 2px !important;
+  transition: background 0.3s ease !important;
 }
 
 .btn-footer-abbonati:hover {
-  background: #762c33;
+  background: #762c33 !important;
 }
 
 .btn-footer-accedi {
-  background: transparent;
-  border: 1px solid #bd0101;
-  color: #bd0101;
-  padding: 12px 24px;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 1rem;
-  width: 100%;
-  border-radius: 2px;
+  background: transparent !important;
+  border: 1px solid #bd0101 !important;
+  color: #bd0101 !important;
+  padding: 12px 24px !important;
+  font-weight: bold !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+  border-radius: 2px !important;
 }
 
 .btn-footer-accedi:hover {
-  background: #bd0101;
-  color: white;
+  background: #bd0101 !important;
+  color: white !important;
 }
 
 .footer-info h4 {
-  color:  rgb(85 85 85 / 0.8);
+  color: rgba(85, 85, 85, 0.8);
   font-size: 0.9rem;
   margin-bottom: 15px;
   font-weight: bold;
@@ -726,6 +694,7 @@ footer {
 
 .footer-info ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .footer-info li {
@@ -734,27 +703,33 @@ footer {
 
 .footer-info a {
   text-decoration: none;
-  color:  #555;
+  color: #555;
   font-size: 1rem;
 }
 
 .footer-info a:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.5);
+  text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
 
-/* COLONNA DESTRA - 3 colonne affiancate */
+/* ============================================ */
+/* COLONNA DESTRA - GESTITA DA BOOTSTRAP */
+/* ============================================ */
 .footer-right {
   flex: 2.5;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 90px;
 }
 
+/* Override del gap di Bootstrap per mantenere lo spazio originale */
+.footer-right .row {
+  --bs-gutter-x: 90px;
+  --bs-gutter-y: 0;
+}
+
+/* Stili per le colonne */
 .footer-col h4 {
-  color:  rgb(85 85 85 / 0.8);
+  color: rgba(85, 85, 85, 0.8);
   font-size: 0.9rem;
   margin-bottom: 15px;
   font-weight: bold;
@@ -762,7 +737,8 @@ footer {
 
 .footer-col ul {
   list-style: none;
-  margin-bottom: 30px;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .footer-col li {
@@ -777,7 +753,7 @@ footer {
 
 .footer-col a:hover {
   text-decoration: underline;
-  text-decoration-color: rgb(85 85 85 / 0.50);
+  text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
@@ -795,31 +771,104 @@ footer {
   margin-top: 5px;
 }
 
-/* Social list con icone */
+.social-list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .social-list li a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-}
-
-.social-list i {
-  width: 16px;
-  font-size: 0.8rem;
+  text-decoration: none;
   color: #555;
 }
-.social-list a:hover i {
-  color: #b11f2c;
+
+.social-list li a:hover {
+  text-decoration: underline;
 }
 
-/* Copyright */
+/* Rimuove colore blu e sottolineatura da TUTTI i link del footer */
+footer a,
+.footer-col a,
+.footer-info a,
+.social-list a,
+.copyright-right a {
+  color: #555 !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  background-color: transparent !important;
+}
+
+/* Aggiunge sottolineatura SOLO quando passi il mouse sopra */
+footer a:hover,
+.footer-col a:hover,
+.footer-info a:hover,
+.social-list a:hover,
+.copyright-right a:hover {
+  text-decoration: underline !important;
+  text-decoration-color: rgba(85, 85, 85, 0.5) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 2px !important;
+  color: #555 !important;
+}
+
+footer ul,
+.footer-col ul,
+.footer-info ul,
+.social-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Stile corretto per i titoli delle sezioni nel footer */
+.footer-col h4,
+.footer-info h4,
+.notizie-group h4,
+.inserti-group h4,
+.manifesto-group h4,
+.quotidiano-group h4,
+.social-group h4 {
+  color: rgba(85, 85, 85, 0.8) !important;
+  font-size: 0.9rem !important;
+  font-weight: bold !important;
+  font-family: Arial, sans-serif !important;
+  margin-bottom: 15px !important;
+  margin-top: 0 !important;
+  text-transform: none !important;
+}
+
+/* Assicura che i titoli non vengano sottolineati o cambiati al hover */
+.footer-col h4:hover,
+.footer-info h4:hover {
+  text-decoration: none !important;
+}
+
+/* Stile per i singoli elementi della lista */
+footer li,
+.footer-col li,
+.footer-info li,
+.social-list li,
+.notizie-group li,
+.inserti-group li,
+.manifesto-group li,
+.quotidiano-group li,
+.footer-right li {
+  margin-bottom: 8px !important;
+  list-style: none !important;
+}
+
+/* ============================================ */
+/* COPYRIGHT */
+/* ============================================ */
 .copyright-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding-top: 14px;
-  padding-bottom: 10px;
+  padding: 14px 20px 10px;
   border-top: 1px solid #e0e0e0;
 }
 
@@ -830,20 +879,19 @@ footer {
 
 .copyright-left p {
   font-family: Arial, sans-serif;
-  margin-left: 30px;
+  margin: 0;
 }
 
 .copyright-right {
   display: flex;
   flex-wrap: wrap;
-  gap: -20px;
+  gap: 20px;
 }
 
 .copyright-right a {
   text-decoration: none;
   color: #3e3e3e;
   font-size: 1rem;
-  margin-right: 30px;
   font-family: Arial, sans-serif;
 }
 
@@ -858,34 +906,60 @@ footer {
   margin-top: 4px;
 }
 
-/* Responsive */
+/* ============================================ */
+/* RESPONSIVE */
+/* ============================================ */
 @media (max-width: 900px) {
   .footer-two-columns {
     flex-direction: column;
     gap: 40px;
   }
 
-  .footer-right {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-right {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-buttons {
-    flex-direction: column;
-    align-items: flex-start;
+  .footer-right .row {
+    --bs-gutter-x: 30px;
   }
 
   .copyright-wrapper {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
 
   .copyright-right {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .logo-img {
+    height: 45px;
+  }
+
+  .subscription-box h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-right {
+    gap: 30px;
+  }
+
+  .footer-buttons {
+    align-items: flex-start;
+  }
+
+  .rectangle {
+    width: 100%;
+    margin-left: 0;
   }
 }
