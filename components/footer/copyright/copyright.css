@@ -1,0 +1,10 @@
+/* ============================================ */
+/* 14. COPYRIGHT E LINEA FINALE                 */
+/* ============================================ */
+
+.bottom-line {
+  border-top: 1px solid #e0e0e0;
+  height: 1px;
+  width: 100%;
+  margin-top: 4px;
+}
