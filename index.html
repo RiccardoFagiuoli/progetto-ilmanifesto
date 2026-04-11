@@ -5,42 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Progetto Universitario - il manifesto (Lorem Ipsum)</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS (solo questo, nessun CSS personalizzato) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Il tuo CSS (dopo Bootstrap per sovrascrivere) -->
-  <link rel="stylesheet" href="css/style.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-<!-- OVERLAY PER SIDEBAR -->
-<div class="overlay" id="overlay"></div>
-
 <!-- SIDEBAR MENU (laterale sinistra) -->
-<div class="sidebar-menu" id="sidebarMenu">
-  <div class="sidebar-header">
-    <span class="sidebar-logo">il manifesto</span>
-    <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
-  </div>
-  <ul class="sidebar-nav">
-    <li><a href="#">Primo piano</a></li>
-    <li><a href="#">Politica</a></li>
-    <li><a href="#">Internazionale</a></li>
-    <li><a href="#">Cultura</a></li>
-    <li><a href="#">Economia</a></li>
-    <li><a href="#">Ambiente</a></li>
-    <li><a href="#">Podcast</a></li>
-    <li><hr></li>
-    <li><a href="#">Edicola</a></li>
-    <li><a href="#">Newsletter</a></li>
-    <li><a href="#">Cerca</a></li>
-    <li><a href="#">Store</a></li>
-    <li><a href="#">Contatti</a></li>
-    <li><a href="#">Aiuto</a></li>
-  </ul>
+<div class="sidebar-menu d-none" id="sidebarMenu">
+  <!-- il contenuto è gestito da JS -->
 </div>
 
 <!-- ============================================ -->
@@ -49,40 +28,42 @@
 <div class="sticky-header">
 
   <!-- TOP BAR -->
-  <div class="top-bar">
+  <div class="top-bar py-2">
     <div class="container">
-      <div class="top-left">
-        <div class="date-group">
-          <span class="date" id="currentDate">Caricamento...</span>
-          <span class="separator-dash">—</span>
-          <span class="update" id="currentUpdate">Aggiornato alle --:--</span>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex gap-3 align-items-center">
+          <div class="d-flex align-items-center">
+            <span id="currentDate" class="text-secondary fs-small">Caricamento...</span>
+            <span class="text-secondary mx-1">—</span>
+            <span id="currentUpdate" class="text-secondary fs-small">Aggiornato alle --:--</span>
+          </div>
+          <a href="#" class="top-link">Abbonamenti</a>
+          <a href="#" class="top-link">Ultime edizioni</a>
         </div>
-        <a href="#" class="top-link">Abbonamenti</a>
-        <a href="#" class="top-link">Ultime edizioni</a>
-      </div>
-      <div class="top-right">
-        <a href="#">Store</a>
-        <a href="#">Contatti</a>
-        <a href="#">English</a>
-        <a href="#">Aiuto</a>
-        <a href="#">Tariffe</a>
-        <a href="#">Gerenza</a>
+        <div class="d-flex gap-3">
+          <a href="#" class="top-link">Store</a>
+          <a href="#" class="top-link">Contatti</a>
+          <a href="#" class="top-link">English</a>
+          <a href="#" class="top-link">Aiuto</a>
+          <a href="#" class="top-link">Tariffe</a>
+          <a href="#" class="top-link">Gerenza</a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- HEADER PRINCIPALE -->
-  <div class="main-header">
+  <div class="py-3 border-bottom">
     <div class="container">
       <div class="header-content">
         <div class="header-left">
           <button class="hamburger-btn" id="hamburgerBtn">
             <i class="fas fa-bars"></i>
-            <span class="hamburger-text">Esplora</span>
+            <span class="fw-normal">Esplora</span>
           </button>
         </div>
         <div class="header-center">
-          <img src="https://placehold.co/350x60/cccccc/666666?text=LOGO" alt="Logo placeholder" class="logo-img" id="mainLogo">
+          <img src="https://placehold.co/350x60/cccccc/666666?text=LOGO" alt="Logo" class="logo-img" id="mainLogo" style="height: 60px; transition: height 0.3s;">
         </div>
         <div class="header-right">
           <button class="btn-abbonati-top">Abbonati</button>
@@ -95,275 +76,253 @@
   <!-- RIGA ROSSA -->
   <div class="red-line"></div>
 
-  <!-- MENU NAVIGAZIONE ORIZZONTALE -->
-  <div class="main-nav">
+  <!-- MENU NAVIGAZIONE -->
+  <div class="py-1">
     <div class="container">
-      <ul class="nav-links">
-        <li><a href="#">Edizione di oggi</a></li>
-        <li><a href="#">Abbonati</a></li>
-        <li><a href="#">Politica</a></li>
-        <li><a href="#">Internazionale</a></li>
-        <li><a href="#">Cultura</a></li>
-        <li><a href="#">Visioni</a></li>
-        <li><a href="#">MdM</a></li>
-        <li><a href="#">Podcast</a></li>
-        <li><a href="#">Newsletter</a></li>
+      <ul class="nav nav-links">
+        <li class="nav-item"><a class="nav-link" href="#">Edizione di oggi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Abbonati</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Politica</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Internazionale</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Cultura</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Visioni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">MdM</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Podcast</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Newsletter</a></li>
       </ul>
     </div>
   </div>
 
   <div class="grey-line"></div>
-</div><!-- fine sticky-header -->
+</div>
 
 <!-- ============================================ -->
 <!-- CONTENUTO PRINCIPALE -->
 <!-- ============================================ -->
-<main class="container main-content">
+<main class="container my-4">
 
   <!-- HERO SECTION -->
-  <div class="hero-section">
-    <div class="hero-category">INTERNAZIONALE</div>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-    <div class="hero-meta">Sed do eiusmod tempor / INCIDIDUNT</div>
-    <img src="https://placehold.co/1200x400/cccccc/666666?text=IMMAGINE+DI+COPERTINA" alt="Hero image placeholder" class="hero-image img-fluid">
-    <div class="hero-excerpt">
-      <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </div>
+  <div class="hero-section border-bottom pb-4 mb-4">
+    <div class="hero-category mb-2">INTERNAZIONALE</div>
+    <h1 class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+    <div class="text-secondary small mb-3">Sed do eiusmod tempor / INCIDIDUNT</div>
+    <img src="https://placehold.co/1200x400/cccccc/666666?text=IMMAGINE+DI+COPERTINA" class="img-fluid w-100 mb-3 rounded" alt="Hero">
+    <p class="lead"><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
 
-  <!-- ARTICOLI ROW (2 colonne con Bootstrap) -->
+  <!-- ARTICOLI ROW (2 colonne) -->
   <div class="row g-4 mb-5">
     <div class="col-12 col-md-8">
-      <div class="article-card">
-        <div class="article-category">POLITICA</div>
-        <h2>Sed ut perspiciatis unde omnis iste natus error</h2>
-        <div class="article-meta">Quis autem vel eum / DOLOREM</div>
-        <img src="https://placehold.co/600x200/cccccc/666666?text=ARTICOLO+IMMAGINE" alt="Article image placeholder" class="article-image img-fluid">
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-      </div>
+      <div class="article-category mb-1">POLITICA</div>
+      <h2 class="h3">Sed ut perspiciatis unde omnis iste natus error</h2>
+      <div class="text-secondary small mb-2">Quis autem vel eum / DOLOREM</div>
+      <img src="https://placehold.co/600x200/cccccc/666666?text=ARTICOLO+IMMAGINE" class="img-fluid w-100 mb-3 rounded" alt="Article">
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
     </div>
     <div class="col-12 col-md-4">
-      <div class="sidebar-column">
-        <div class="sidebar-item">
-          <div class="sidebar-category">EUROPA</div>
-          <h3>At vero eos et accusamus et iusto odio dignissimos</h3>
-          <div class="sidebar-meta">Ducimus qui blanditiis / PRAESENTIUM</div>
+      <div class="d-flex flex-column gap-4">
+        <div class="border-bottom pb-3">
+          <div class="sidebar-category mb-1">EUROPA</div>
+          <h3 class="h5">At vero eos et accusamus et iusto odio dignissimos</h3>
+          <div class="text-secondary small">Ducimus qui blanditiis / PRAESENTIUM</div>
         </div>
-        <div class="sidebar-item">
-          <div class="sidebar-category">INTERNAZIONALE</div>
-          <h3>Excepteur sint occaecat cupidatat non proident</h3>
-          <div class="sidebar-meta">Sunt in culpa / OFFICIA</div>
+        <div class="border-bottom pb-3">
+          <div class="sidebar-category mb-1">INTERNAZIONALE</div>
+          <h3 class="h5">Excepteur sint occaecat cupidatat non proident</h3>
+          <div class="text-secondary small">Sunt in culpa / OFFICIA</div>
         </div>
-        <div class="sidebar-item">
-          <div class="sidebar-category">ECONOMIA</div>
-          <h3>Nam libero tempore, cum soluta nobis est eligendi</h3>
-          <div class="sidebar-meta">Optio cumque / NIHIL IMPEDIT</div>
+        <div class="border-bottom pb-3">
+          <div class="sidebar-category mb-1">ECONOMIA</div>
+          <h3 class="h5">Nam libero tempore, cum soluta nobis est eligendi</h3>
+          <div class="text-secondary small">Optio cumque / NIHIL IMPEDIT</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- CARD GRID (altri articoli con Bootstrap) -->
-  <div class="more-articles">
-    <div class="section-title">Altri articoli</div>
+  <!-- CARD GRID -->
+  <div class="more-articles mb-5">
+    <div class="section-title mb-4">Altri articoli</div>
     <div class="row g-4">
-      <!-- Card 1 -->
       <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100">
-          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+ASIA" class="card-img-top" alt="Card image">
-          <div class="card-body">
-            <div class="card-category">INTERNAZIONALE</div>
-            <h3 class="card-title h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-            <p class="card-text">Sed do eiusmod tempor incididunt ut labore</p>
+        <div class="card h-100 border-0">
+          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+ASIA" class="card-img-top rounded" alt="Card">
+          <div class="card-body px-0">
+            <div class="card-category mb-1">INTERNAZIONALE</div>
+            <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+            <p class="card-text small text-secondary">Sed do eiusmod tempor incididunt ut labore</p>
           </div>
         </div>
       </div>
-      <!-- Card 2 -->
       <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100">
-          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+EUROPA" class="card-img-top" alt="Card image">
-          <div class="card-body">
-            <div class="card-category">EUROPA</div>
-            <h3 class="card-title h5">Ut enim ad minim veniam, quis nostrud exercitation</h3>
-            <p class="card-text">Ullamco laboris nisi ut aliquip ex ea commodo</p>
+        <div class="card h-100 border-0">
+          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+EUROPA" class="card-img-top rounded" alt="Card">
+          <div class="card-body px-0">
+            <div class="card-category mb-1">EUROPA</div>
+            <h5 class="card-title">Ut enim ad minim veniam, quis nostrud exercitation</h5>
+            <p class="card-text small text-secondary">Ullamco laboris nisi ut aliquip ex ea commodo</p>
           </div>
         </div>
       </div>
-      <!-- Card 3 -->
       <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100">
-          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+CONTE" class="card-img-top" alt="Card image">
-          <div class="card-body">
-            <div class="card-category">POLITICA</div>
-            <h3 class="card-title h5">Duis aute irure dolor in reprehenderit in voluptate</h3>
-            <p class="card-text">Velit esse cillum dolore eu fugiat nulla pariatur</p>
+        <div class="card h-100 border-0">
+          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+CONTE" class="card-img-top rounded" alt="Card">
+          <div class="card-body px-0">
+            <div class="card-category mb-1">POLITICA</div>
+            <h5 class="card-title">Duis aute irure dolor in reprehenderit in voluptate</h5>
+            <p class="card-text small text-secondary">Velit esse cillum dolore eu fugiat nulla pariatur</p>
           </div>
         </div>
       </div>
-      <!-- Card 4 -->
       <div class="col-12 col-md-6 col-lg-3">
-        <div class="card h-100">
-          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+PD" class="card-img-top" alt="Card image">
-          <div class="card-body">
-            <div class="card-category">POLITICA</div>
-            <h3 class="card-title h5">Excepteur sint occaecat cupidatat non proident</h3>
-            <p class="card-text">Sunt in culpa qui officia deserunt mollit anim</p>
+        <div class="card h-100 border-0">
+          <img src="https://placehold.co/300x160/cccccc/666666?text=FOTO+PD" class="card-img-top rounded" alt="Card">
+          <div class="card-body px-0">
+            <div class="card-category mb-1">POLITICA</div>
+            <h5 class="card-title">Excepteur sint occaecat cupidatat non proident</h5>
+            <p class="card-text small text-secondary">Sunt in culpa qui officia deserunt mollit anim</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ULTERIORI TESTI -->
+  <!-- LOREM IPSUM SECTION -->
   <div class="lorem-section">
-    <h2>Where does it come from?</h2>
+    <h2 class="h4 mb-3">Where does it come from?</h2>
     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
     <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
   </div>
 
   <!-- ABBONAMENTI -->
   <div class="subscription-box">
-    <h3>Partecipa.</h3>
-    <p class="text">Vogliamo continuare a fare un manifesto libero, per tutte e tutti.</p>
-    <button class="btn-subscription-box-special">Abbonamento speciale a 4 euro</button>
-    <a class="btn-subscription-box-abbonamenti" href="#">Tutti gli abbonamenti →</a>
+    <h3 class="text-white fw-medium display-5">Partecipa.</h3>
+    <p class="text-white mt-3 fs-5-5">Vogliamo continuare a fare un manifesto libero, per tutte e tutti.</p>
+    <button class="btn-subscription-special fw-medium mt-4">Abbonamento speciale a 4 euro</button>
+    <a href="#" class="subscription-link fw-medium ms-4">Tutti gli abbonamenti →</a>
   </div>
 
 </main>
 
 <!-- PRE-FOOTER -->
-<div class="pre-footer">
+<div class="pre-footer border-top py-2 mt-3">
   <div class="container">
-    <div class="pre-footer-text">il manifesto</div>
+    <div class="pre-footer-text text-secondary">il manifesto</div>
   </div>
 </div>
 
 <!-- FOOTER -->
-<footer>
+<footer class="border-top py-4">
   <div class="container">
-    <div class="footer-two-columns">
+    <div class="row g-4">
 
       <!-- COLONNA SINISTRA -->
-      <div class="footer-left">
+      <div class="col-12 col-md-3">
         <div class="rectangle">
-          <div class="footer-brand">
-            <div class="footer-tagline">IL MIO MANIFESTO</div>
-            <div class="footer-buttons">
-              <button class="btn-footer-abbonati">Abbonati</button>
-              <button class="btn-footer-accedi">Accedi</button>
-            </div>
+          <div class="footer-tagline mb-3 fs-0-8 fw-bolder">IL MIO MANIFESTO</div>
+          <div class="d-flex flex-column gap-2 mb-4">
+            <button class="btn btn-danger w-95 py-2 fw-bold rounded-0-1">Abbonati</button>
+            <button class="btn btn-outline-danger w-95 py-2 fw-bold rounded-0-1">Accedi</button>
           </div>
-
-          <div class="footer-info">
-            <h4>INFO</h4>
-            <ul>
-              <li><a href="#">Aiuto Newsletter</a></li>
-              <li><a href="#">Tariffe</a></li>
-              <li><a href="#">Abbonamenti</a></li>
-              <li><a href="#">Regala un abbonamento</a></li>
-              <li><a href="#">La membership</a></li>
-              <li><a href="#">Cosa puoi fare</a></li>
-              <li><a href="#">Store</a></li>
-              <li><a href="#">Termini e condizioni</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Cookie</a></li>
-            </ul>
-          </div>
+          <h6 class="fw-bold footer-title fs-0-9">INFO</h6>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Aiuto Newsletter</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Newsletter</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Tariffe</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Abbonamenti</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Regala un abbonamento</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">La membership</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Cosa puoi fare</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Store</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Termini e condizioni</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Privacy</a></li>
+            <li class="mb-2"><a href="#" class="text-black text-decoration-none">Cookie</a></li>
+          </ul>
         </div>
       </div>
 
-      <!-- COLONNA DESTRA (3 colonne con Bootstrap) -->
-      <div class="footer-right">
+      <!-- COLONNA DESTRA (3 colonne) -->
+      <div class="col-12 col-md-9">
         <div class="row g-4">
 
           <!-- Colonna 1: NOTIZIE + INSERTI -->
           <div class="col-12 col-md-4">
-            <div class="notizie-group">
-              <h4>NOTIZIE</h4>
-              <ul>
-                <li><a href="#">Editoriale</a></li>
-                <li><a href="#">Commenti</a></li>
-                <li><a href="#">Politica</a></li>
-                <li><a href="#">Internazionale</a></li>
-                <li><a href="#">Europa</a></li>
-                <li><a href="#">Italia</a></li>
-                <li><a href="#">Lavoro</a></li>
-                <li><a href="#">Economia</a></li>
-                <li><a href="#">Scuola</a></li>
-                <li><a href="#">Cultura</a></li>
-                <li><a href="#">Visioni</a></li>
-                <li><a href="#">Sport</a></li>
-                <li><a href="#">Rubriche</a></li>
-                <li><a href="#">Appelli</a></li>
-              </ul>
-            </div>
-            <div class="inserti-group">
-              <h4>INSERTI</h4>
-              <ul>
-                <li><a href="#">Alias</a></li>
-                <li><a href="#">Alias Domenica</a></li>
-                <li><a href="#">ExtraTerrestre</a></li>
-                <li><a href="#">Le Monde Diplomatique</a></li>
-                <li><a href="#">La fine del mondo</a></li>
-              </ul>
-            </div>
+            <h6 class="fw-bold footer-title fs-0-9">NOTIZIE</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Editoriale</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Commenti</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Politica</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Internazionale</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Europa</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Italia</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Lavoro</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Economia</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Scuola</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Cultura</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Visioni</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Sport</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Rubriche</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Appelli</a></li>
+            </ul>
+            <h6 class="fw-bold footer-title fs-0-9 mt-4">INSERTI</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Alias</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Alias Domenica</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">ExtraTerrestre</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Le Monde Diplomatique</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">La fine del mondo</a></li>
+            </ul>
           </div>
 
           <!-- Colonna 2: IL MANIFESTO + IL QUOTIDIANO + SOCIAL -->
           <div class="col-12 col-md-4">
-            <div class="manifesto-group">
-              <h4>IL MANIFESTO</h4>
-              <ul>
-                <li><a href="#">Gerenza</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">Abbonamenti</a></li>
-                <li><a href="#">Contatti</a></li>
-                <li><a href="#">Aiuto</a></li>
-                <li><a href="#">English edition</a></li>
-              </ul>
-            </div>
-            <div class="quotidiano-group">
-              <h4>IL QUOTIDIANO</h4>
-              <ul>
-                <li><a href="#">Edizioni Pdf</a></li>
-                <li><a href="#">Archivio</a></li>
-              </ul>
-            </div>
-            <div class="social-group">
-              <h4>SOCIAL</h4>
-              <ul class="social-list">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">YouTube</a></li>
-                <li><a href="#">Vimeo</a></li>
-                <li><a href="#">Spreaker</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Pinterest</a></li>
-              </ul>
-            </div>
+            <h6 class="fw-bold footer-title fs-0-9">IL MANIFESTO</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Gerenza</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Store</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Abbonamenti</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Contatti</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Aiuto</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">English edition</a></li>
+            </ul>
+            <h6 class="fw-bold footer-title fs-0-9 mt-4">IL QUOTIDIANO</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Edizioni Pdf</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Archivio</a></li>
+            </ul>
+            <h6 class="fw-bold footer-title fs-0-9 mt-4">SOCIAL</h6>
+            <ul class="list-unstyled small social-list">
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Instagram</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Facebook</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">YouTube</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Vimeo</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Spreaker</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Twitter</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Pinterest</a></li>
+            </ul>
           </div>
 
           <!-- Colonna 3: IL COLLETTIVO -->
           <div class="col-12 col-md-4">
-            <h4>IL COLLETTIVO</h4>
-            <ul>
-              <li><a href="#">MdM il manifesto del manifesto</a></li>
-              <li><a href="#">- cooperativa</a></li>
-              <li><a href="#">- giornale</a></li>
-              <li><a href="#">- piattaforma</a></li>
-              <li><a href="#">- impresa</a></li>
-              <li><a href="#">- comunità</a></li>
-              <li><a href="#">- storia</a></li>
-              <li><a href="#">Buon compleanno manifesto!</a></li>
-              <li><a href="#">MeMa</a></li>
-              <li><a href="#">il manifesto Lab</a></li>
-              <li><a href="#">I podcast del manifesto</a></li>
-              <li><a href="#">Le novità digitali</a></li>
-              <li><a href="#">Le app del manifesto</a></li>
-              <li><a href="#">#ilmanifesto50</a></li>
-              <li><a href="#">Diritti foto e articoli</a></li>
-              <li><a href="#">Correzioni</a></li>
-              <li><a href="#">la manifestival</a></li>
+            <h6 class="fw-bold footer-title fs-0-9">IL COLLETTIVO</h6>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">MdM il manifesto del manifesto</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">- cooperativa</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">- giornale</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">- piattaforma</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">- impresa</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">- comunità</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">- storia</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Buon compleanno manifesto!</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">MeMa</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">il manifesto Lab</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">I podcast del manifesto</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Le novità digitali</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Le app del manifesto</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">#ilmanifesto50</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Diritti foto e articoli</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">Correzioni</a></li>
+              <li class="mb-2"><a href="#" class="text-black text-decoration-none">la manifestival</a></li>
             </ul>
           </div>
 
@@ -375,22 +334,20 @@
 </footer>
 
 <!-- COPYRIGHT -->
-<div class="copyright-wrapper">
+<div class="border-top py-2 mt-3 border-bottom">
   <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
-    <div class="copyright-left">
-      <p class="mb-0">© 2026 UniFI - progetto ilmanifesto | placehold.co & Ipsum</p>
-    </div>
-    <div class="copyright-right d-flex gap-3 flex-wrap">
-      <a href="#">Termini e condizioni</a>
-      <a href="#">Cookie</a>
-      <a href="#">Accessibilità</a>
-      <a href="#">TDM</a>
-      <a href="#">Privacy</a>
+    <div class="copyright-left small text-secondary">© 2026 UniFI - progetto ilmanifesto | placehold.co & Ipsum</div>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="#" class="text-black text-decoration-none small">Termini e condizioni</a>
+      <a href="#" class="text-black text-decoration-none small">Cookie</a>
+      <a href="#" class="text-black text-decoration-none small">Accessibilità</a>
+      <a href="#" class="text-black text-decoration-none small">TDM</a>
+      <a href="#" class="text-black text-decoration-none small">Privacy</a>
     </div>
   </div>
 </div>
 
-<div class="bottom-line">&nbsp;</div>
+<div class="bottom-line mt-4"></div>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

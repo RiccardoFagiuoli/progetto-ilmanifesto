@@ -1,252 +1,201 @@
-* {
+/* ============================================ */
+/* 1. UTILITY CLASS PERSONALIZZATE              */
+/* ============================================ */
+
+.fs-5-5 {
+  font-size: 1.125rem;  /* 18px */
+}
+
+.fs-0-8 {
+  font-size: 0.8rem;
+}
+
+.fs-0-9 {
+  font-size: 0.85rem;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.rounded-0-1 {
+  border-radius: 0.1rem;
+}
+
+/* ============================================ */
+/* 2. LAYOUT DI BASE (CONTAINER, BODY, HTML)    */
+/* ============================================ */
+
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #ffffff;
   color: #1a1a1a;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+/* ============================================ */
+/* 3. HEADER STICKY                             */
+/* ============================================ */
 
-/* ============================================ */
-/* STICKY HEADER - TUTTO FISSO A SCHERMO */
-/* ============================================ */
 .sticky-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 /* ============================================ */
-/* TOP BAR */
+/* 4. TOP BAR                                   */
 /* ============================================ */
+
 .top-bar {
-  background-color: #f5f5f0;
-  padding: 8px 0;
-  font-family: Arial, sans-serif;
+  background-color: #f6f5f5;
   font-size: 0.85rem;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .top-link {
   color: #777;
-  font-size: 0.9rem;
-  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
   text-decoration: underline;
-  text-decoration-color: rgba(85, 85, 85, 0.6);
-  text-decoration-thickness: 0.8px;
-  text-underline-offset: 2px;
+  text-decoration-color: rgba(85, 85, 85, 0.5);
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 1px;
 }
 
 .top-link:hover {
   text-decoration: underline;
   text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-}
-
-.top-bar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-left {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  color: #777;
-}
-
-.date-group {
-  display: flex;
-  align-items: center;
-}
-
-.separator-dash {
-  color: #777;
-  margin: 0 4px;
-  transform: translateY(-1px);
-  display: inline-block;
-}
-
-.top-left .date,
-.top-left .update {
-  color: #777;
-}
-
-.top-right {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.top-right a {
-  text-decoration: none;
-  color: #777;
-}
-
-.top-right a:hover {
-  text-decoration: underline;
-  text-decoration-color: rgba(85, 85, 85, 0.5);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
 }
 
 /* ============================================ */
-/* HEADER */
+/* 5. HEADER PRINCIPALE (logo, hamburger, bottoni) */
 /* ============================================ */
-.main-header {
-  background-color: #ffffff;
-  padding: 15px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
 
 .header-content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
 .header-left {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
+  justify-self: start;
 }
 
 .header-center {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  justify-self: center;
 }
 
 .header-right {
-  flex: 1;
+  justify-self: end;
   display: flex;
-  justify-content: flex-end;
   gap: 12px;
 }
 
-/* Hamburger button */
+/* Hamburger */
 .hamburger-btn {
   background: none;
   border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #333230;
-  padding: 8px;
+  font-size: 1.3rem;
+  color: rgba(85, 85, 85, 1);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.hamburger-text {
-  font-size: 1rem;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
-  letter-spacing: 0.5px;
+.hamburger-btn span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333230;
 }
 
-.hamburger-text:hover {
+.hamburger-btn span:hover {
   text-decoration: underline;
   text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
 }
 
 /* Logo */
 .logo-img {
-  height: 60px;
-  width: auto;
   transition: height 0.3s ease;
 }
 
-/* Bottoni header - override Bootstrap */
+/* Bottoni header */
 .btn-abbonati-top {
-  background: #bd0101 !important;
-  border: 1px solid #bd0101 !important;
-  color: #ffffff !important;
-  padding: 10px 22px !important;
-  font-size: 1rem !important;
-  font-weight: bold !important;
-  font-family: Arial, sans-serif !important;
-  cursor: pointer !important;
-  border-radius: 2px !important;
-  transition: all 0.3s !important;
+  background-color: #bd0101;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: background-color 0.3s;
 }
 
 .btn-abbonati-top:hover {
-  background: #762c33 !important;
-  border-color: #762c33 !important;
-  color: white !important;
+  background-color: #762c33;
 }
 
 .btn-entra-top {
-  background: transparent !important;
-  border: 1px solid #bd0101 !important;
-  color: #bd0101 !important;
-  padding: 10px 22px !important;
-  font-size: 1rem !important;
-  font-weight: bold !important;
-  font-family: Arial, sans-serif !important;
-  cursor: pointer !important;
-  border-radius: 2px !important;
-  transition: all 0.3s !important;
+  background-color: transparent;
+  border: 1px solid #bd0101;
+  color: #bd0101;
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: all 0.3s;
 }
 
 .btn-entra-top:hover {
-  background: #bd0101 !important;
-  color: white !important;
+  background-color: #bd0101;
+  color: white;
 }
 
 /* ============================================ */
-/* RIGA ROSSA */
+/* 6. MENU NAVIGAZIONE (nav-links)              */
 /* ============================================ */
-.red-line {
-  border-bottom: 6px solid #c12b2b;
-}
-
-/* ============================================ */
-/* MENU NAVIGAZIONE */
-/* ============================================ */
-.main-nav {
-  background: white;
-  padding: 8px 0;
-}
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  gap: 40px;
-  padding: 8px 0;
-  font-family: Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  margin: 0;
+  gap: 35px;
+  justify-content: flex-start;
 }
 
-.nav-links li a {
-  text-decoration: none;
+.nav-link {
   color: #1a1a1a;
-  font-weight: 500;
-  letter-spacing: 0.3px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
 }
 
-.nav-links li a:hover {
+.nav-links .nav-link:hover {
   text-decoration: underline;
   text-decoration-color: rgba(85, 85, 85, 0.5);
   text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
+  color: #1a1a1a;
+}
+
+/* ============================================ */
+/* 7. LINEE DECORATIVE (rossa e grigia)         */
+/* ============================================ */
+
+.red-line {
+  border-bottom: 6px solid #c12b2b;
 }
 
 .grey-line {
@@ -254,650 +203,156 @@ body {
 }
 
 /* ============================================ */
-/* SIDEBAR */
+/* 8. HERO SECTION                              */
 /* ============================================ */
-.sidebar-menu {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 300px;
-  height: 100%;
-  background-color: #1a1a1a;
-  color: white;
-  z-index: 1001;
-  transition: left 0.3s ease;
-  overflow-y: auto;
-  font-family: Arial, sans-serif;
-}
-
-.sidebar-menu.active {
-  left: 0;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  display: none;
-}
-
-.overlay.active {
-  display: block;
-}
-
-.sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #333;
-}
-
-.sidebar-logo {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #b11f2c;
-}
-
-.close-sidebar {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.sidebar-nav {
-  list-style: none;
-  padding: 20px;
-}
-
-.sidebar-nav li {
-  margin-bottom: 15px;
-}
-
-.sidebar-nav li a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-}
-
-.sidebar-nav li a:hover {
-  color: #b11f2c;
-}
-
-.sidebar-nav hr {
-  margin: 15px 0;
-  border-color: #333;
-}
-
-/* ============================================ */
-/* CONTENUTO PRINCIPALE */
-/* ============================================ */
-.main-content {
-  margin-top: 20px;
-}
-
-/* ============================================ */
-/* HERO SECTION */
-/* ============================================ */
-.hero-section {
-  margin: 40px 0 30px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 25px;
-}
-
-.hero-category {
-  color: #b11f2c;
-  font-family: Arial, sans-serif;
-  font-size: 0.7rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
 
 .hero-section h1 {
   font-size: 2.3rem;
   line-height: 1.2;
-  margin-bottom: 10px;
 }
 
-.hero-meta {
-  color: #666;
-  font-family: Arial, sans-serif;
-  font-size: 0.75rem;
-  margin-bottom: 20px;
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-  margin: 15px 0;
-  border-radius: 4px;
-}
-
-.hero-excerpt {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #2c2c2c;
-  margin-top: 10px;
-}
-
-/* ============================================ */
-/* ARTICOLI ROW (contenitori per row/col Bootstrap) */
-/* ============================================ */
-.article-category {
-  color: #b11f2c;
-  font-family: Arial, sans-serif;
+.hero-category,
+.article-category,
+.sidebar-category,
+.card-category {
+  color: #bd0101;
   font-size: 0.7rem;
   font-weight: bold;
   text-transform: uppercase;
-}
-
-.article-card h2 {
-  font-size: 1.5rem;
-  margin: 8px 0;
-}
-
-.article-meta {
-  color: #666;
-  font-family: Arial, sans-serif;
-  font-size: 0.7rem;
-  margin-bottom: 12px;
-}
-
-.article-image {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  margin: 12px 0;
-  border-radius: 4px;
-}
-
-.sidebar-column {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.sidebar-item {
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 15px;
-}
-
-.sidebar-category {
-  color: #b11f2c;
-  font-family: Arial, sans-serif;
-  font-size: 0.65rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.sidebar-item h3 {
-  font-size: 1.1rem;
-  margin: 5px 0;
-}
-
-.sidebar-meta {
-  color: #666;
-  font-family: Arial, sans-serif;
-  font-size: 0.7rem;
+  letter-spacing: 0.5px;
 }
 
 /* ============================================ */
-/* CARD GRID - override Bootstrap card */
+/* 9. SEZIONE TITOLI                            */
 /* ============================================ */
+
 .section-title {
   font-size: 1.3rem;
   font-weight: bold;
-  border-left: 4px solid #b11f2c;
+  border-left: 4px solid #bd0101;
   padding-left: 12px;
-  margin-bottom: 25px;
-}
-
-/* Override delle card Bootstrap */
-.card {
-  border: none !important;
-  background: transparent !important;
-  border-bottom: 1px solid #f0f0f0 !important;
-  padding-bottom: 15px !important;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  margin-bottom: 12px;
-  border-radius: 4px;
-}
-
-.card-category {
-  color: #b11f2c;
-  font-family: Arial, sans-serif;
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.card .card-title {
-  font-size: 1rem !important;
-  margin-bottom: 8px !important;
-  font-family: Georgia, 'Times New Roman', Times, serif !important;
-  color: #1a1a1a;
-}
-
-.card .card-text {
-  font-size: 0.8rem !important;
-  color: #666 !important;
+  margin-bottom: 1.5rem;
 }
 
 /* ============================================ */
-/* ABBONAMENTI */
+/* 10. SEZIONE LOREM IPSUM                      */
 /* ============================================ */
+
+.lorem-section {
+  background-color: #f9f9f7;
+  border-left: 4px solid #bd0101;
+  padding: 1.25rem;
+  margin: 2rem 0;
+}
+
+/* ============================================ */
+/* 11. SUBSCRIPTION BOX (partecipa)             */
+/* ============================================ */
+
 .subscription-box {
-  background: #bd0101;
+  width: 100%;
+  background-color: #bd0101;
+  padding: 4rem;
+  align-items: center;
   text-align: center;
-  padding: 60px;
-  border-radius: 2px;
+  margin: 2rem auto;
 }
 
-.subscription-box h3 {
-  color: white;
-  font-size: 3rem;
-  margin-bottom: 10px;
-  font-family: Arial, sans-serif;
-}
-
-.subscription-box .text {
-  color: white;
-  font-size: 1.1rem;
-  margin: 15px 0;
-  font-family: Arial, sans-serif;
-}
-
-.btn-subscription-box-special {
-  font-size: 0.9rem;
-  background: white;
+.btn-subscription-special {
+  background-color: white;
   color: #bd0101;
   border: none;
-  padding: 12px 12px;
-  border-radius: 5px;
-  font-weight: bold;
-  margin: 12px 0;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-}
-
-.btn-subscription-box-special:hover {
-  background: #fafafa;
-}
-
-.btn-subscription-box-abbonamenti {
-  background: transparent;
-  font-weight: bold;
-  font-size: 1em;
-  text-decoration: none;
   padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-subscription-special:hover {
+  background-color: #f3f3f3;
+}
+
+.subscription-link {
   color: white;
-  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+.subscription-link:hover {
+  color: #f3f3f3;
 }
 
 /* ============================================ */
-/* LOREM IPSUM SECTION */
+/* 12. PRE-FOOTER                               */
 /* ============================================ */
-.lorem-section {
-  margin: 40px 0;
-  padding: 20px;
-  background-color: #f9f9f7;
-  border-left: 4px solid #b11f2c;
-}
-
-.lorem-section h2 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  color: #1a1a1a;
-}
-
-.lorem-section p {
-  margin-bottom: 15px;
-  line-height: 1.5;
-  color: #444;
-}
-
-/* ============================================ */
-/* PRE-FOOTER */
-/* ============================================ */
-.pre-footer {
-  background: #ffffff;
-  color: #555;
-  padding: 10px 0 10px;
-  font-family: Arial, sans-serif;
-  font-size: 0.9rem;
-  margin-top: 10px;
-  border-top: 1px solid #e0e0e0;
-}
 
 .pre-footer-text {
-  color: rgba(85, 85, 85, 0.8);
-  font-family: Arial, sans-serif;
-  font-size: 1.1em;
-  letter-spacing: 0.5px;
-  margin-left: 12px;
+  font-size: 0.9rem;
 }
 
 /* ============================================ */
-/* FOOTER */
+/* 13. FOOTER                                   */
 /* ============================================ */
-footer {
-  background: #ffffff;
-  color: #555;
-  padding: 30px 0 20px;
-  font-family: Arial, sans-serif;
-  font-size: 0.7rem;
-  margin-top: 2px;
-  border-top: 1px solid #e0e0e0;
-}
 
-/* Layout a 2 colonne */
-.footer-two-columns {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-/* COLONNA SINISTRA */
-.footer-left {
-  flex: 0.8;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-}
-
+/* Rettangolo colonna sinistra */
 .rectangle {
-  background-color: #f5f5f0;
-  padding: 20px;
+  background-color: #f6f5f5;
+  padding: 1.25rem;
   border-radius: 3px;
-  width: 90%;
-  margin-left: 10px;
+  width: 95%;
+  margin-left: 5px;
+  margin-right: auto;
 }
 
-.footer-brand {
-  margin-bottom: 30px;
-}
-
+/* Tagline */
 .footer-tagline {
   color: rgba(85, 85, 85, 0.8);
-  font-size: 1.2em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
-.footer-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 30px;
-}
-
-/* Bottoni footer - override Bootstrap */
-.btn-footer-abbonati {
-  background: #bd0101 !important;
-  color: white !important;
-  border: none !important;
-  padding: 12px 24px !important;
-  font-weight: bold !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 1rem !important;
-  width: 100% !important;
-  border-radius: 2px !important;
-  transition: background 0.3s ease !important;
-}
-
-.btn-footer-abbonati:hover {
-  background: #762c33 !important;
-}
-
-.btn-footer-accedi {
-  background: transparent !important;
-  border: 1px solid #bd0101 !important;
-  color: #bd0101 !important;
-  padding: 12px 24px !important;
-  font-weight: bold !important;
-  font-family: Arial, sans-serif !important;
-  font-size: 1rem !important;
-  width: 100% !important;
-  border-radius: 2px !important;
-}
-
-.btn-footer-accedi:hover {
-  background: #bd0101 !important;
-  color: white !important;
-}
-
-.footer-info h4 {
+/* Titoli colonne footer */
+.footer-title {
   color: rgba(85, 85, 85, 0.8);
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-  font-weight: bold;
 }
 
-.footer-info ul {
-  list-style: none;
-  padding-left: 0;
+/* Icone social */
+.social-list i {
+  width: 20px;
 }
 
-.footer-info li {
-  margin-bottom: 8px;
+/* Link footer */
+footer a.text-secondary {
+  transition: color 0.2s;
 }
 
-.footer-info a {
-  text-decoration: none;
-  color: #555;
-  font-size: 1rem;
-}
-
-.footer-info a:hover {
-  text-decoration: underline;
-  text-decoration-color: rgba(85, 85, 85, 0.5);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-}
-
-/* ============================================ */
-/* COLONNA DESTRA - GESTITA DA BOOTSTRAP */
-/* ============================================ */
-.footer-right {
-  flex: 2.5;
-}
-
-/* Override del gap di Bootstrap per mantenere lo spazio originale */
-.footer-right .row {
-  --bs-gutter-x: 90px;
-  --bs-gutter-y: 0;
-}
-
-/* Stili per le colonne */
-.footer-col h4 {
-  color: rgba(85, 85, 85, 0.8);
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.footer-col li {
-  margin-bottom: 8px;
-}
-
-.footer-col a {
-  text-decoration: none;
-  color: #555;
-  font-size: 1rem;
-}
-
-.footer-col a:hover {
-  text-decoration: underline;
-  text-decoration-color: rgba(85, 85, 85, 0.5);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-}
-
-/* Gruppi all'interno delle colonne */
-.notizie-group,
-.inserti-group,
-.manifesto-group,
-.quotidiano-group,
-.social-group {
-  margin-bottom: 25px;
-}
-
-.social-group h4 {
-  margin-top: 5px;
-}
-
-.social-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.social-list li a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: #555;
-}
-
-.social-list li a:hover {
-  text-decoration: underline;
-}
-
-/* Rimuove colore blu e sottolineatura da TUTTI i link del footer */
-footer a,
-.footer-col a,
-.footer-info a,
-.social-list a,
-.copyright-right a {
-  color: #555 !important;
-  text-decoration: none !important;
-  font-size: 1rem !important;
-  background-color: transparent !important;
-}
-
-/* Aggiunge sottolineatura SOLO quando passi il mouse sopra */
-footer a:hover,
-.footer-col a:hover,
-.footer-info a:hover,
-.social-list a:hover,
-.copyright-right a:hover {
+footer a:hover {
   text-decoration: underline !important;
   text-decoration-color: rgba(85, 85, 85, 0.5) !important;
   text-decoration-thickness: 2px !important;
-  text-underline-offset: 2px !important;
-  color: #555 !important;
 }
 
-footer ul,
-.footer-col ul,
-.footer-info ul,
-.social-list {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
+/* Bottoni footer */
+footer .btn-danger {
+  background-color: #bd0101 !important;
+  border-color: #bd0101 !important;
 }
 
-/* Stile corretto per i titoli delle sezioni nel footer */
-.footer-col h4,
-.footer-info h4,
-.notizie-group h4,
-.inserti-group h4,
-.manifesto-group h4,
-.quotidiano-group h4,
-.social-group h4 {
-  color: rgba(85, 85, 85, 0.8) !important;
-  font-size: 0.9rem !important;
-  font-weight: bold !important;
-  font-family: Arial, sans-serif !important;
-  margin-bottom: 15px !important;
-  margin-top: 0 !important;
-  text-transform: none !important;
+footer .btn-danger:hover {
+  background-color: #762c33 !important;
+  border-color: #762c33 !important;
 }
 
-/* Assicura che i titoli non vengano sottolineati o cambiati al hover */
-.footer-col h4:hover,
-.footer-info h4:hover {
-  text-decoration: none !important;
+footer .btn-outline-danger {
+  color: #bd0101 !important;
+  border-color: #bd0101 !important;
 }
 
-/* Stile per i singoli elementi della lista */
-footer li,
-.footer-col li,
-.footer-info li,
-.social-list li,
-.notizie-group li,
-.inserti-group li,
-.manifesto-group li,
-.quotidiano-group li,
-.footer-right li {
-  margin-bottom: 8px !important;
-  list-style: none !important;
+footer .btn-outline-danger:hover {
+  background-color: #bd0101 !important;
+  color: white !important;
 }
 
 /* ============================================ */
-/* COPYRIGHT */
+/* 14. COPYRIGHT E LINEA FINALE                 */
 /* ============================================ */
-.copyright-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 14px 20px 10px;
-  border-top: 1px solid #e0e0e0;
-}
-
-.copyright-left {
-  font-size: 1rem;
-  color: #777;
-}
-
-.copyright-left p {
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-.copyright-right {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.copyright-right a {
-  text-decoration: none;
-  color: #3e3e3e;
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
-}
-
-.copyright-right a:hover {
-  color: #10124c;
-}
 
 .bottom-line {
   border-top: 1px solid #e0e0e0;
@@ -907,22 +362,165 @@ footer li,
 }
 
 /* ============================================ */
-/* RESPONSIVE */
+/* 15. MEDIA QUERY - TELEFONI (max 576px)       */
 /* ============================================ */
-@media (max-width: 900px) {
-  .footer-two-columns {
+
+@media (max-width: 576px) {
+
+  /* Navbar scrollabile */
+  .main-nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .main-nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .main-nav::-webkit-scrollbar-thumb {
+    background: #bd0101;
+    border-radius: 10px;
+  }
+
+  /* Nav links */
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 10px 0;
+    margin: 0;
+    white-space: nowrap;
+    justify-content: center;
+  }
+
+  .nav-links .nav-link {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 8px 0;
+  }
+
+  /* Top bar */
+  .top-bar .container {
     flex-direction: column;
-    gap: 40px;
+    gap: 8px;
   }
 
-  .footer-right .row {
-    --bs-gutter-x: 30px;
+  .top-left {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .copyright-wrapper {
+  .top-link {
+    font-size: 0.7rem;
+  }
+
+  .top-right {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Header */
+  .logo-img {
+    height: 40px !important;
+    width: auto;
+  }
+
+  .hamburger-text {
+    display: none;
+  }
+
+  .btn-abbonati-top,
+  .btn-entra-top {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+
+  /* Hero */
+  .hero-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-category {
+    font-size: 0.6rem;
+  }
+
+  .hero-meta {
+    font-size: 0.65rem;
+  }
+
+  /* Articoli */
+  .article-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar-item h3 {
+    font-size: 0.9rem;
+  }
+
+  /* Card */
+  .card-title {
+    font-size: 0.9rem !important;
+  }
+
+  /* Subscription box */
+  .subscription-box {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .subscription-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .subscription-box .text {
+    font-size: 0.9rem;
+  }
+
+  .btn-subscription-special {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+
+  /* Footer */
+  .rectangle {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .footer-tagline {
+    font-size: 1rem;
+  }
+
+  .btn-footer-abbonati,
+  .btn-footer-accedi {
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .footer-info a,
+  .footer-col a {
+    font-size: 0.8rem;
+  }
+
+  /* Copyright */
+  .copyright-wrapper .container {
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    gap: 10px;
+  }
+
+  .copyright-left p {
+    margin-left: 0;
   }
 
   .copyright-right {
@@ -930,36 +528,25 @@ footer li,
   }
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    gap: 20px;
-    justify-content: center;
-  }
+/* ============================================ */
+/* 16. MEDIA QUERY - TABLET (577px - 768px)     */
+/* ============================================ */
+
+@media (min-width: 577px) and (max-width: 768px) {
 
   .hero-section h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    gap: 20px;
   }
 
   .logo-img {
-    height: 45px;
+    height: 50px;
   }
 
-  .subscription-box h3 {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-right {
-    gap: 30px;
-  }
-
-  .footer-buttons {
-    align-items: flex-start;
-  }
-
-  .rectangle {
-    width: 100%;
-    margin-left: 0;
+  .subscription-box {
+    padding: 2rem;
   }
 }
