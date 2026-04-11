@@ -3,7 +3,7 @@ function updateDateTime() {
   const data = new Date().toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
   const ora = new Date().toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
   document.getElementById('currentDate').innerText = data;
-  document.getElementById('currentUpdate').innerText = ora;
+  document.getElementById('currentUpdate').innerText = 'Aggiornato alle '+ora;
 }
 updateDateTime();
 
