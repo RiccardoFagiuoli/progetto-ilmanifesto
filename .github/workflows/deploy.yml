@@ -3,7 +3,7 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # O 'master', il nome del tuo ramo principale
+      - master
 
 jobs:
   build-and-deploy:
@@ -20,5 +20,4 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/nome-della-tua-app/browser # Controlla il percorso esatto in dist/
-          branch: gh-pages
+          folder: dist/progetto-ilmanifesto/browser
